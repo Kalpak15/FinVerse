@@ -1,10 +1,10 @@
 const User = require("../models/UserModel");
 const cloudinary = require("../config/cloudinary");
-
+const fs = require("fs");
 // Fetch user profile by ID
 const getUserProfile = async (req, res) => {
   try {
-    const user = await User.findById(req.params.id);
+    const user = await User.findById(req.params.userId);
     if (!user) {
       return res.status(404).json({ message: 'User not found' });
     }
@@ -21,7 +21,7 @@ const updateUserProfile = async (req, res) => {
     const { firstName, lastName, phoneNumber, address, gender, age } = req.body;
 
     const updatedUser = await User.findByIdAndUpdate(
-      req.params.id,
+      req.params.userId,
       { firstName, lastName, phoneNumber, address, gender, age },
       { new: true }
     );
@@ -49,7 +49,7 @@ const uploadProfilePicture = async (req, res) => {
     });
 
     const updatedUser = await User.findByIdAndUpdate(
-      req.params.id,
+      req.params.userId,
       { profilePicture: uploadResult.secure_url },
       { new: true }
     );
@@ -58,6 +58,7 @@ const uploadProfilePicture = async (req, res) => {
       return res.status(404).json({ message: 'User not found' });
     }
 
+    
     fs.unlinkSync(req.file.path); // Delete the file from the server after upload
     res.status(200).json({ message: 'Profile picture updated', profilePicture: uploadResult.secure_url });
   } catch (error) {
