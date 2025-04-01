@@ -5,7 +5,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import './index.css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
+import { ToastContainer } from "react-toastify";
 
 import Signup from "./pages/SignPage";
 import HomePage from "./pages/HomePage"
@@ -22,13 +22,18 @@ import ChangePassword from "./pages/ChangePassword";
 import InvestmentGuidancePage from "./pages/InvestmentGuidence";
 import FinancialLiteracyPage from "./pages/FinancialLiteracy";
 import SecurityPage from "./pages/Security";
+import EditProfile from "./pages/EditProfile";
 
-
+const userId=localStorage.getItem('userId')
 
 function App() {
   const [count, setCount] = useState(0)
 
+
+  
   return (
+    <>
+
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -39,7 +44,16 @@ function App() {
         <Route path="/chatbot" element={<ProtectedRoute><Chatbot /></ProtectedRoute>} />
         <Route path="/head" element={<Header />} />
         <Route path="/verify-email" element={<VerifyEmailPage />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile/:userId" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
+        <Route path="/profile/edit/:userId" element={<EditProfile />} />
+        {/* <Route
+          path="/profile/edit/:userId"
+          element={
+            <ProtectedRoute>
+              <EditProfile />
+            </ProtectedRoute>
+          }
+        /> */}
         <Route path="/forgot-password" element={<ForgotPassword />} />
         {/* <Route path="/login" element={<LoginPage />} /> */}
         <Route path="/change-password" element={<ChangePassword />} />
@@ -51,7 +65,8 @@ function App() {
     </Router>
 
     
-      
+    <ToastContainer position="top-right" autoClose={3000} hideProgressBar />
+  </>
   )
 }
 

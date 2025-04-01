@@ -157,6 +157,7 @@ import { UserCircleIcon } from '@heroicons/react/24/solid';
 const Header = ({ onTestimonialsClick }) => {
   const navigate = useNavigate();
   const token = localStorage.getItem('token');
+  const userId = localStorage.getItem('userId');
 
   const handleSignupClick = () => {
     navigate('/signup');
@@ -168,12 +169,12 @@ const Header = ({ onTestimonialsClick }) => {
 
   const handleLogout = () => {
     localStorage.removeItem('token');
-    localStorage.removeItem('user');
+    // localStorage.removeItem('user');
     navigate('/login');
   };
 
   const handleProfileClick = () => {
-    navigate('/profile');
+    navigate(`/profile/${userId}`);
   };
 
   const handleTestimonialsClick = () => {
@@ -194,7 +195,7 @@ const Header = ({ onTestimonialsClick }) => {
           <div className="bg-blue-500 rounded-full p-2 flex items-center justify-center">
             <span className="text-white font-bold text-lg">FinVerse</span>
           </div>
-          <span className="text-xl font-semibold text-white">Financial Advisor</span>
+          <span className="text-xl font-semibold text-white">FinVerse</span>
         </div>
         
         {/* Navigation Links */}
