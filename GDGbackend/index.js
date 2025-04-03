@@ -6,6 +6,8 @@ const auth = require("./routes/auth");
 const profile = require("./routes/profile");
 const path = require("path");
 const authMiddleware=require('./middlewares/authmiddleware')
+const investingRoutes = require("./routes/InvestingBasics");
+// const authMiddleware=require('./middlewares/authmiddleware')
 // const reviews = require("./routes/reviews");
 // const paymentRoutes = require("./routes/carpool");
 // const notificationRoutes = require("./routes/notifications");
@@ -25,8 +27,7 @@ app.use(express.urlencoded({ extended: true }));
 dbConnect();
 
 
-// app.use("/api/v1", carpool);
-// app.use("/api/v1/profile", profile);
+app.use("/api", investingRoutes);
 app.use("/api/v1/auth", auth);
 app.use("/api/v1/profile", profile);
 app.use("/uploads", express.static(path.join(__dirname, "../uploads")));

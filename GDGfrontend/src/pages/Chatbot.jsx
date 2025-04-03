@@ -88,7 +88,7 @@ const Chatbot = () => {
 
     try {
       // Use the API URL from your .env file (Vite requires prefix VITE_)
-      const apiUrl = import.meta.env.VITE_CHATBOT_API_URL || 'http://localhost:5000';
+      const apiUrl = import.meta.env.VITE_CHATBOT_API_URL || 'http://localhost:3000';
       const response = await axios.post(`${apiUrl}/chat`, { message: message });
       const botMessage = {
         id: messages.length + 2,

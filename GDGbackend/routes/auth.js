@@ -8,6 +8,8 @@ const {forgotPassword,verifyOTP,resetPassword,resendOTP} = require('../controlle
 
 
 
+
+
 router.post('/signup', upload.single('profilePicture') ,signup); 
 router.post('/login', login); 
 router.post('/change-password', changePassword);
