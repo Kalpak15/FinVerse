@@ -10,9 +10,20 @@ import {
 } from '@heroicons/react/24/solid';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { useNavigate } from 'react-router-dom';
+
+
 
 const InvestmentGuidancePage = () => {
   const [activeStrategy, setActiveStrategy] = useState(null);
+  const navigate= useNavigate()
+
+
+
+  const handleButton=()=>{
+      navigate('/investment-basics')
+  }
+
 
   const investmentStrategies = [
     {
@@ -148,7 +159,8 @@ const InvestmentGuidancePage = () => {
           </p>
           
           <div className="flex justify-center space-x-4">
-            <button className="
+            <button onClick={handleButton} className="
+      
               px-10 py-4 rounded-full 
               bg-gradient-to-r from-blue-600 to-purple-600 
               hover:from-blue-700 hover:to-purple-700 

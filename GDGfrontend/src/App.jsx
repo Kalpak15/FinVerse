@@ -23,6 +23,8 @@ import InvestmentGuidancePage from "./pages/InvestmentGuidence";
 import FinancialLiteracyPage from "./pages/FinancialLiteracy";
 import SecurityPage from "./pages/Security";
 import EditProfile from "./pages/EditProfile";
+import InvestingBasics from "./pages/InvestingBasics";
+import FinVerseQuiz from "./pages/Quiz";
 
 const userId=localStorage.getItem('userId')
 
@@ -46,6 +48,7 @@ function App() {
         <Route path="/verify-email" element={<VerifyEmailPage />} />
         <Route path="/profile/:userId" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
         <Route path="/profile/edit/:userId" element={<EditProfile />} />
+        <Route path="/quiz" element={<FinVerseQuiz />} />
         {/* <Route
           path="/profile/edit/:userId"
           element={
@@ -60,6 +63,8 @@ function App() {
         <Route path="/investment-guidence" element={<InvestmentGuidancePage />} />
         <Route path="/financial-literacy" element={<FinancialLiteracyPage />} />
         <Route path="/security" element={<SecurityPage />} />
+        <Route path="/investment-basics" element={<InvestingBasics /> } />
+
         {/* <Route path="*" element={<Navigate to="/login" replace />} /> */}
       </Routes>
     </Router>
