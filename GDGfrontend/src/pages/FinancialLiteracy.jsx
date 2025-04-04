@@ -7,10 +7,12 @@ import {
 } from '@heroicons/react/24/solid';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { useNavigate } from 'react-router-dom';
+
 
 const FinancialLiteracyPage = () => {
   const [activeModule, setActiveModule] = useState(null);
-
+  const navigate = useNavigate();
   const learningModules = [
     {
       icon: <BookOpenIcon className="w-10 h-10 text-yellow-500" />,
@@ -35,6 +37,10 @@ const FinancialLiteracyPage = () => {
   const handleModuleClick = (module) => {
     setActiveModule(activeModule === module ? null : module);
   };
+
+  const handleClick=()=>{
+    navigate('/quiz')
+  }
 
   return (
     <div className="min-h-screen bg-[#0A1128] flex flex-col overflow-hidden text-white">
@@ -112,7 +118,7 @@ const FinancialLiteracyPage = () => {
           <p className="text-gray-400 max-w-2xl mx-auto mb-8">
             Unlock the power of financial knowledge and transform your financial future.
           </p>
-          <button className="bg-yellow-600 hover:bg-yellow-700 text-white px-8 py-3 rounded-lg transition">
+          <button onClick={handleClick} className="bg-yellow-600 hover:bg-yellow-700 text-white px-8 py-3 rounded-lg transition">
             Begin Learning
           </button>
         </section>
