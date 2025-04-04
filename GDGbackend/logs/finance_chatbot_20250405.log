@@ -1,0 +1,9 @@
+2025-04-05 00:11:30,225 [INFO] Found existing 'datatext.txt'. Skipping PDF extraction.
+2025-04-05 00:11:30,230 [INFO] Loaded existing chat history.
+2025-04-05 00:11:30,476 [INFO] Loaded existing Gemini retriever store.
+2025-04-05 00:11:35,272 [INFO] Found existing 'datatext.txt'. Skipping PDF extraction.
+2025-04-05 00:11:35,274 [INFO] Loaded existing chat history.
+2025-04-05 00:11:35,581 [INFO] Loaded existing Gemini retriever store.
+2025-04-05 00:11:47,441 [INFO] Detected intent: general for query: How should I start investing?...
+2025-04-05 00:11:47,444 [INFO] Processing query with intent 'general': How should I start investing?
+2025-04-05 00:11:55,548 [INFO] Generated response in 8.11s
