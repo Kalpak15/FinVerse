@@ -81,7 +81,7 @@ const FinVerseQuiz = () => {
     });
 
     try {
-      const response = await fetch('http://localhost:5000/quiz');
+      const response = await fetch('http://localhost:3000/quiz');
       const data = await response.json();
       
       if (!data.questions) {
