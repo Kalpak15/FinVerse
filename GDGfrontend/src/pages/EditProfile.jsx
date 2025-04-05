@@ -938,10 +938,9 @@
 
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { getProfile, updateProfile } from "../api/profileApi";
+import { getProfile, updateProfile } from "../api/ProfileApi";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
 import {
   Camera,
   ArrowLeft,
