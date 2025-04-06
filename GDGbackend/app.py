@@ -8,6 +8,8 @@ import google.generativeai as genai
 from datetime import datetime
 
 from practice import chat_with_ai, logger, clear_history,llm
+from dotenv import load_dotenv
+load_dotenv()
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS to allow your React frontend to communicate with this API
@@ -44,7 +46,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Initialize Gemini API
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY", "AIzaSyC_yR_Z1BNvkL1ixrejs2aqvGHSXK2CwvE"))
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 # List of financial categories to randomize prompts
 FINANCE_CATEGORIES = [
