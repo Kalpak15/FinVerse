@@ -18,7 +18,7 @@ const Login = () => {
 
     try {
       const response = await axios.post(
-        'http://localhost:3000/api/v1/auth/login',
+        'https://finverse-production-547e.up.railway.app/api/v1/auth/login',
         { email: email.toLowerCase(), password }
       );
       

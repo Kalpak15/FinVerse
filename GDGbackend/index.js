@@ -23,7 +23,7 @@ const PORT = process.env.PORT || 4000;
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+// finverse-production-547e.up.railway.app
 dbConnect();
 
 
