@@ -27,9 +27,12 @@ from datetime import datetime
 # ------------------------------------
 load_dotenv()
 
+
+port = int(os.getenv("FLASK_PORT", 5000))
+
 # Replace with your actual keys
-os.environ["HF_TOKEN"] = "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"
-gemini_api_key = "AIzaSyC_yR_Z1BNvkL1ixrejs2aqvGHSXK2CwvE"
+os.environ["HF_TOKEN"] = os.getenv("HF_TOKEN")
+gemini_api_key = os.getenv("GOOGLE_API_KEY")
 
 # ------------------------------------
 # Part 3: Logging Configuration
