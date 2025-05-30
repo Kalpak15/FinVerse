@@ -53,7 +53,7 @@
 | **Backend** | Express.js, Node.js |
 | **Database** | MongoDB |
 | **AI/ML** | RAG Model, Natural Language Processing |
-| **Styling** | Responsive CSS, Modern UI Components |
+| **Styling** | Tailwind CSS, Modern UI Components |
 
 
 ## 🚀 Getting Started
@@ -86,18 +86,10 @@ Make sure you have the following installed:
    cd frontend
    npm install
    ```
-
-3. **Set up environment variables**
    
-   Create a `.env` file in the backend directory:
-   ```env
-   MONGODB_URI=your_mongodb_connection_string
-   JWT_SECRET=your_jwt_secret
-   ML_API_ENDPOINT=your_ml_model_endpoint
-   PORT=5000
-   ```
+ **⚠️ Important:** Configure your environment variables before running the application.
 
-4. **Start the application**
+3. **Start the application**
    
    Backend server:
    ```bash
@@ -111,7 +103,7 @@ Make sure you have the following installed:
    npm start
    ```
 
-5. **Access the application**
+4. **Access the application**
    
    Open your browser and navigate to `http://localhost:3000`
 
@@ -137,15 +129,6 @@ Make sure you have the following installed:
 - Financial literacy resources
 - Skill development tracking
 
-## 🔧 API Endpoints
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET` | `/api/user/profile` | Get user financial profile |
-| `POST` | `/api/chat/message` | Send message to AI chatbot |
-| `GET` | `/api/quiz/questions` | Fetch quiz questions |
-| `POST` | `/api/quiz/submit` | Submit quiz answers |
-| `GET` | `/api/recommendations` | Get personalized recommendations |
 
 ## 🎨 UI/UX Highlights
 
@@ -163,7 +146,6 @@ Make sure you have the following installed:
 
 ## 🚀 Future Enhancements
 
-- [ ] Advanced portfolio management tools
 - [ ] Integration with banking APIs
 - [ ] Real-time market data integration
 - [ ] Social features for financial communities
@@ -175,31 +157,17 @@ Make sure you have the following installed:
 We welcome contributions to Finverse! Please follow these steps:
 
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
+2. Create a feature branch (`git checkout -b feature/NewFeature`)
+3. Commit your changes (`git commit -m 'Add some NewFeature'`)
+4. Push to the branch (`git push origin feature/NewFeature`)
 5. Open a Pull Request
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 👨‍💻 Author
 
 **Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
-- Email: your.email@example.com
+- GitHub: [@kalpak15](https://github.com/kalpak15)
+- LinkedIn: [Your LinkedIn](https://www.linkedin.com/in/kalpakanilkulkarni/)
+- Email: kulkarnikalpak15@gmail.com
 
-## 🙏 Acknowledgments
 
-- Thanks to the open-source community for amazing tools and libraries
-- Special recognition to contributors and beta testers
-- Inspiration from leading fintech applications
-
----
-
-<div align="center">
-  <p><strong>⭐ Star this repository if you found it helpful!</strong></p>
-  <p>Made with ❤️ and lots of ☕</p>
-</div>
