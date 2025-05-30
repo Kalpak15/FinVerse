@@ -182,3 +182,6 @@ We welcome contributions to Finverse! Please follow these steps:
 - Email: kulkarnikalpak15@gmail.com
 
 
+
+## 📄 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
