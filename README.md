@@ -62,7 +62,7 @@
 
 Make sure you have the following installed:
 - **Node.js** (v14 or higher)
-- **npm** or **yarn**
+- **npm** 
 - **MongoDB** (local or cloud instance)
 
 ### Installation
@@ -77,13 +77,13 @@ Make sure you have the following installed:
    
    For the backend:
    ```bash
-   cd backend
+   cd GDG-Backend
    npm install
    ```
    
    For the frontend:
    ```bash
-   cd frontend
+   cd GDG-frontend
    npm install
    ```
    
@@ -93,13 +93,13 @@ Make sure you have the following installed:
    
    Backend server:
    ```bash
-   cd backend
+   cd GDG-Backend
    npm start
    ```
    
    Frontend development server:
    ```bash
-   cd frontend
+   cd GDG-frontend
    npm start
    ```
 
@@ -107,26 +107,16 @@ Make sure you have the following installed:
    
    Open your browser and navigate to `http://localhost:3000`
 
-📁 Project Structure
-🏗️ Architecture
+## 📁 Project Structure
+
+```
 finverse/
-├── GDGbackend/           # Express.js backend server
-│   ├── models/           # MongoDB data models
-│   ├── routes/           # API route handlers
-│   ├── middleware/       # Custom middleware
-│   ├── controllers/      # Business logic controllers
-│   ├── config/           # Database and app configuration
-│   └── package.json      # Backend dependencies
-├── GDGfrontend/          # React.js frontend application
-│   ├── src/
-│   │   ├── components/   # Reusable React components
-│   │   ├── pages/        # Application pages
-│   │   ├── hooks/        # Custom React hooks
-│   │   ├── services/     # API service functions
-│   │   ├── utils/        # Utility functions
-│   │   └── styles/       # CSS and styling files
-│   └── package.json      # Frontend dependencies
-└── README.md             # Project documentation
+├── GDG-Backend/                # Express.js backend application
+├── GDG-frontend/               # React frontend application
+└── README.md                   # Project Documentation
+```
+
+
 
 ## 📱 Features Showcase
 
