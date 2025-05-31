@@ -163,6 +163,12 @@ finverse/
 - [ ] Advanced ML models for better predictions
 - [ ] Multi-language support
 
+
+## 🚀 Demo
+
+*Video Demo:* [View Project](https://youtu.be/85L-xdrzxLI?si=YQk3aV4w173JyUTl)
+
+
 ## 🤝 Contributing
 
 We welcome contributions to Finverse! Please follow these steps:
